@@ -94,6 +94,7 @@ function TechStack() {
     { name: 'TypeScript', logo: '/typescript.svg?height=20&width=20' },
     { name: 'Node.js', logo: '/nodejs.png?height=20&width=20' },
     { name: 'Vercel', logo: '/vercel.svg?height=20&width=20' },
+    { name: 'PHP', logo: '/php.png?height=20&width=20' },
     { name: 'MySQL', logo: '/mysql.webp?height=20&width=20' },
     { name: 'C++', logo: '/cplusplus.png?height=20&width=20' },
     { name: 'C#', logo: '/csharp.png?height=20&width=20' },
