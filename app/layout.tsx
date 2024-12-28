@@ -22,8 +22,8 @@ const poppins = Poppins({
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: "Payment DanEngine",
-  description: "Payment system for DanEngine",
+  title: "About Danilo Eslawan",
+  description: "Danilo Eslawan Portfolio",
 };
 
 export default function RootLayout({
