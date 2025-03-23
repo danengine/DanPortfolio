@@ -28,9 +28,12 @@ export default function Portfolio() {
         <TechStack />
       </GridFadeIn>
       <GridFadeIn delay={0.6}>
-        <Experiences />
+        <Clubs />
       </GridFadeIn>
       <GridFadeIn delay={0.8}>
+        <Experiences />
+      </GridFadeIn>
+      <GridFadeIn delay={1.0}>
         <Education />
       </GridFadeIn>
     </div>
@@ -141,8 +144,30 @@ function TechStack() {
   )
 }
 
-function Experiences() {
-  const experiences = [
+function Clubs() {
+  const clubs = [
+    // {
+    //   //soon!!
+    //   title: 'Technology',
+    //   company: 'Association of Proactive Innovators Mapúa MCM',
+    //   logo: '/api.jpg?height=48&width=48',
+    //   period: 'August 2025 - Present',
+    //   description: "As a Web & App Developer, I contribute to the organization's projects by building and maintaining web and mobile applications."
+    // },
+    {
+      title: 'Web & App Developer',
+      company: 'Mapúa Malayan Developer Student Club',
+      logo: '/mmdsc.jpg?height=48&width=48',
+      period: 'February 2025 - Present',
+      description: "As a Web & App Developer, I contribute to the organization's projects by building and maintaining web and mobile applications."
+    },
+    {
+      title: 'Project Development Member & CS Auditor',
+      company: 'Computing Students Society',
+      logo: '/css.jpg?height=48&width=48',
+      period: 'September 2024 - Present',
+      description: "As an Auditor, I oversee the organization's activities, ensuring compliance and transparency in all processes."
+    },
     {
       title: 'Auditor',
       company: 'Coding Organization for Digital Excellence',
@@ -150,6 +175,34 @@ function Experiences() {
       period: 'September 2024 - Present',
       description: "As an Auditor, I oversee the organization's activities, ensuring compliance and transparency in all processes."
     },
+    // {
+    //   title: 'Junior Developer',
+    //   company: 'StartUp Ventures',
+    //   logo: '/placeholder.svg?height=48&width=48',
+    //   period: 'Jun 2015 - Feb 2017',
+    //   description: 'Assisted in building MVP for various startup projects.'
+    // }
+  ]
+
+  return (
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5, delay: 0.6 }}
+      className="bg-white"
+    >
+      <h2 className="text-xl font-semibold mb-3 text-gray-800">Organization</h2>
+      <div className="space-y-3">
+        {clubs.map((exp, index) => (
+          <ExperienceCard key={index} experience={exp} />
+        ))}
+      </div>
+    </motion.div>
+  )
+}
+
+function Experiences() {
+  const experiences = [
     {
       title: 'Full Stack Developer',
       company: 'Stick Bros',
