@@ -179,13 +179,13 @@ function Clubs() {
       description:
         "As an Auditor, I oversee the organization's activities, ensuring compliance and transparency in all processes.",
       timeline: [
-        // {
-        //   date: "March 2025",
-        //   role: "Attendance Checker",
-        //   description:
-        //     "Created an attendance checker using RFID to verify attendance, ensuring it only checks members who have paid the membership fee",
-        //   githubUrl: "https://github.com/danengine/rfid-attendance-checker",
-        // },
+        {
+          date: "March 2025",
+          role: "Attendance Checker",
+          description:
+            "Created an attendance checker using RFID to verify attendance, ensuring it only checks members who have paid the membership fee",
+          githubUrl: "",
+        },
         {
           date: "December 2024",
           role: "Code Treasury Panel",
@@ -298,7 +298,7 @@ function ExperienceCard({ experience }: { experience: Experience }) {
 
             {experience.timeline && experience.timeline.length > 0 && (
               <div className="mt-3 border-l-2 border-gray-300 pl-4 space-y-3">
-                <h4 className="text-sm font-medium text-gray-700">Contribution</h4>
+                <h4 className="text-sm font-medium text-gray-700">Projects</h4>
                 {experience.timeline.map((item, index) => (
                   <div key={index} className="relative">
                     <div className="absolute -left-[21px] mt-1.5 h-3 w-3 rounded-full bg-primary"></div>
