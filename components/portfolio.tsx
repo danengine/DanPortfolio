@@ -87,11 +87,9 @@ function AboutMe() {
     >
       <h2 className="text-xl font-semibold mb-2 text-gray-800">About Me</h2>
       <p className="text-gray-500">
-        I'm passionate about back-end development, where I focus on building robust, secure, and high-performance
-        systems. I enjoy working with databases and APIs to ensure seamless integration, reliability, and scalability.
-        Although back-end development is my primary focus, I also work on the front end, particularly with Next.js and
-        shadcn/UI, to contribute to seamless user experiences. My goal is to create efficient, scalable solutions that
-        deliver exceptional results.
+      Hi, I’m Danilo Eslawan, a Computer Science student at Mapúa Malayan Colleges Mindanao. I focus on backend development and software engineering, with an interest in web and game development.
+
+    I enjoy learning new technologies and working on projects that help me grow as a developer. Outside of tech, I like playing volleyball and joining programming competitions. I’m always open to new challenges and opportunities to collaborate with others.
       </p>
     </motion.div>
   )
