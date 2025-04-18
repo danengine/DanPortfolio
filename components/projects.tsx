@@ -41,9 +41,9 @@ interface Project {
 const projects: Project[] = [
     {
         id: "project6",
-        title: "Registration System",
+        title: "Event Registration System",
         description:
-            "A registration system with an automated QR code generator and scanner. It also sends email invitations containing the QR code for seamless event registration and attendance tracking.",
+            "An Event Registration System where it will have forms and when people fill out the form, the organizer has an admin panel to verify their payment. Once verified and approved, it will automatically send them an email containing a QR code. This QR code will be used on the day of the event. The admin panel contains a QR scanner to validate the QR code, ensuring it is valid and can only be used once.",
         technologies: ["Next.js", "Node.js", "MySQL", "TypeScript", "Tailwind CSS", "Vercel", "AWS"],
         images: [
             "/projects/nyxeon-adminlogin.png?height=600&width=800",
@@ -54,7 +54,6 @@ const projects: Project[] = [
             "/projects/nyxeon-prereg1.png?height=600&width=800",
             "/projects/nyxeon-prereg.png?height=600&width=800",
         ],
-        liveUrl: "https://nyxeon.danengine.tech",
         featured: true,
     },
     {
