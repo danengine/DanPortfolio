@@ -40,92 +40,107 @@ interface Project {
 
 const projects: Project[] = [
     {
-        id: "project7",
-        title: "Event Registration System",
-        description:
-            "An Event Registration System where it will have customizable forms and when people fill out the form, the organizer has an admin panel to verify their payment. Once verified and approved, it will automatically send them an email containing a QR code. This QR code will be used on the day of the event. The admin panel contains a QR scanner to validate the QR code, ensuring it is valid and can only be used once.",
-        technologies: ["Next.js", "Node.js", "MySQL"],
-        images: [
-            "/projects/nyxeon-adminlogin.png?height=600&width=800",
-            "/projects/nyxeon-adminpanel.png?height=600&width=800",
-            "/projects/nyxeon-adminpanel2.png?height=600&width=800",
-            "/projects/nyxeon-adminpanel3.png?height=600&width=800",
-            "/projects/nyxeon-adminpanel4.png?height=600&width=800",
-            "/projects/nyxeon-prereg1.png?height=600&width=800",
-            "/projects/nyxeon-prereg.png?height=600&width=800",
-        ],
-        featured: true,
+      id: "project8",
+      title: "Event Registration System",
+      description:
+          "A web-based Event Registration System featuring customizable forms for attendees to fill out. Once a form is submitted, event organizers can use the admin panel to verify the participant's payment. Upon verification and approval, the system automatically sends a confirmation email containing a unique QR code. This QR code serves as the attendee's event pass and will be scanned on the day of the event. The admin panel includes a built-in QR scanner to validate each code, ensuring it is authentic and can only be used once.",
+      technologies: ["Next.js", "Node.js", "MySQL", "AWS", "Docker"],
+      images: [
+          "/projects/nyxeon-adminlogin.png?height=600&width=800",
+          "/projects/nyxeon-adminpanel.png?height=600&width=800",
+          "/projects/nyxeon-adminpanel2.png?height=600&width=800",
+          "/projects/nyxeon-adminpanel3.png?height=600&width=800",
+          "/projects/nyxeon-adminpanel4.png?height=600&width=800",
+          "/projects/nyxeon-prereg1.png?height=600&width=800",
+          "/projects/nyxeon-prereg.png?height=600&width=800",
+      ],
+      liveUrl: "https://nyxeon.danengine.tech",
+      featured: true,
     },
     {
-        id: "project6",
-        title: "Mapúa Grade Tracker",
-        description:
-            "A web application for tracking grades and auto calculating term average for specific term. Built with Next.js, TypeScript, and Tailwind CSS.",
-        technologies: ["Next.js", "Node.js", "MySQL"],
-        images: [
-            "/projects/twa-main.png?height=600&width=800",
-            "/projects/twa-main2.png?height=600&width=800",
-            "/projects/twa-main3.png?height=600&width=800",
-        ],
+      id: "project7",
+      title: "Mapúa Grade Tracker",
+      description:
+          "Mapúa Grade Tracker is a web application designed to display the term average weighted grades of BSCS Mapúa MCM students for a specific term. It also shows the course with the highest grade and is integrated with our school LMS, Blackboard Learn.",
+      technologies: ["Next.js", "Node.js", "MySQL"],
+      images: [
+          "/projects/twa-main.png?height=600&width=800",
+          "/projects/twa-main2.png?height=600&width=800",
+          "/projects/twa-main3.png?height=600&width=800",
+      ],
     },
     {
-        id: "project5",
-        title: "RFID Attendance System",
-        description:
-            "An attendance tracking system using RFID technology to verify attendance for organization members. The system validates membership status before recording attendance.",
-        technologies: ["Next.js", "Node.js", "MySQL"],
-        images: ["/projects/attendancechecker.png?height=600&width=800"],
-        },
+      id: "project6",
+      title: "RFID Attendance System",
+      description:
+          "An attendance tracking system using RFID technology to verify attendance for organization members. The system validates membership status before recording attendance.",
+      technologies: ["Next.js", "Node.js", "MySQL"],
+      images: ["/projects/attendancechecker.png?height=600&width=800"],
+      },
     {
-        id: "project4",
-        title: "Attendance Monitoring System",
-        description:
-        "A C++ WinForms attendance monitoring system that fetches student information from my API, allows one-click attendance marking, and stores the data into a .csv file for our IT101-1 project.",
-        technologies: ["C++"],
-        images: [
-        "/projects/attendance_monitoring.png?height=600&width=800",
-        ],
+      id: "project5",
+      title: "Attendance Monitoring System",
+      description:
+      "A C++ CLI WinForms attendance monitoring system that fetches student information from my API, allows one-click attendance marking, and stores the data into a .csv file for our IT101-1 project.",
+      technologies: ["C++", "Node.js"],
+      images: [
+      "/projects/attendance_monitoring.png?height=600&width=800",
+      ],
+      githubUrl: "https://github.com/danengine/attendance-monitoring-IT101-1L",
     },
     {
-        id: "project3",
-        title: "Code Treasury Panel",
-        description:
-        "A web application for managing organization membership lists and automating receipt generation for membership payments. Built with Next.js, TypeScript, and Tailwind CSS.",
-        technologies: ["Next.js", "Node.js", "MySQL"],
-        images: [
-        "/projects/codetreasury-main.png?height=600&width=800",
-        "/projects/codetreasury-attendance.png?height=600&width=800",
-        ],
+      id: "project4",
+      title: "Code Treasury Panel",
+      description:
+      "A web application for managing organization membership lists and automating receipt generation for membership payments. Built with Next.js, TypeScript, and Tailwind CSS.",
+      technologies: ["Next.js", "Node.js", "MySQL"],
+      images: [
+      "/projects/codetreasury-main.png?height=600&width=800",
+      "/projects/codetreasury-attendance.png?height=600&width=800",
+      ],
     },
     {
-        id: "project2",
-        title: "Trade Run Game",
-        description:
-        "Trade Run is a remake of Stick Run, a nostalgic game we decided to bring back. It was recoded from scratch using the Unity engine, and the server runs on Socket.IO.",
-        technologies: ["Unity", "C#", "MySQL", "AWS"],
-        images: [
-        "/projects/tr-screenshot1.png?height=600&width=800",
-        "/projects/tr-screenshot2.png?height=600&width=800",
-        "/projects/tr-screenshot3.png?height=600&width=800",
-        ],
-        liveUrl: "https://traderun.xyz",
+      id: "project3",
+      title: "Trade Run Game",
+      description:
+      "Trade Run is a remake of Stick Run, a nostalgic game we decided to bring back. It was recoded from scratch using the Unity engine, and the server runs on Socket.IO.",
+      technologies: ["Unity", "C#", "Node.js", "MySQL", "AWS"],
+      images: [
+      "/projects/tr-screenshot1.png?height=600&width=800",
+      "/projects/tr-screenshot2.png?height=600&width=800",
+      "/projects/tr-screenshot3.png?height=600&width=800",
+      ],
+      liveUrl: "https://traderun.xyz",
     },
     {
-        id: "project1",
-        title: "Stick Bros Game",
-        description:
-        "A multiplayer game client developed for Stick Bros. Features real-time gameplay, user authentication, and in-game purchases.",
-        technologies: ["Unity", "C#", "MySQL", "AWS", "Firebase"],
-        images: [
+      id: "project2",
+      title: "Stick Bros Game",
+      description:
+      "Stick Bros is a fast-paced game about running and avoiding obstacles. It was developed as a solo project and released across multiple platforms, including the App Store, Google Play Store, and Steam. The game integrates a server to handle in-app purchases for each platform.",
+      technologies: ["Unity", "C#", "PHP", "MySQL", "AWS", "Firebase"],
+      images: [
         "/projects/sb-wallpaper.png?height=600&width=800",
         "/projects/sb-main.jpg?height=600&width=800",
         "/projects/sb-main2.jpg?height=600&width=800",
         "/projects/sb-main3.jpg?height=600&width=800",
         "/projects/sb-main4.jpg?height=600&width=800",
         "/projects/sb-main5.jpg?height=600&width=800",
-        ],
-        liveUrl: "https://store.steampowered.com/app/2265960/Stick_Bros/",
-        featured: true,
+      ],
+      liveUrl: "https://store.steampowered.com/app/2265960/Stick_Bros/",
+      featured: true,
+    },
+    {
+      id: "project1",
+      title: "Blox Easy Web Game",
+      description:
+      "I made this game back in 2018 when I was 13 years old. It's a social avatar networking site, very similar to Roblox. You can dress up your character, buy limited items, and recharge Bux.",
+      technologies: ["PHP","MySQL"],
+      images: [
+        "/projects/bloxeasy-main.png?height=PHP600&width=800",
+        "/projects/bloxeasy-main2.png?height=PHP600&width=800",
+        "/projects/bloxeasy-main3.png?height=PHP600&width=800",
+        "/projects/bloxeasy-main4.png?height=PHP600&width=800",
+      ],
     },
 ]
 
