@@ -40,11 +40,11 @@ interface Project {
 
 const projects: Project[] = [
     {
-        id: "project6",
+        id: "project7",
         title: "Event Registration System",
         description:
-            "An Event Registration System where it will have forms and when people fill out the form, the organizer has an admin panel to verify their payment. Once verified and approved, it will automatically send them an email containing a QR code. This QR code will be used on the day of the event. The admin panel contains a QR scanner to validate the QR code, ensuring it is valid and can only be used once.",
-        technologies: ["Next.js", "Node.js", "MySQL", "TypeScript", "Tailwind CSS", "Vercel", "AWS"],
+            "An Event Registration System where it will have customizable forms and when people fill out the form, the organizer has an admin panel to verify their payment. Once verified and approved, it will automatically send them an email containing a QR code. This QR code will be used on the day of the event. The admin panel contains a QR scanner to validate the QR code, ensuring it is valid and can only be used once.",
+        technologies: ["Next.js", "Node.js", "MySQL"],
         images: [
             "/projects/nyxeon-adminlogin.png?height=600&width=800",
             "/projects/nyxeon-adminpanel.png?height=600&width=800",
@@ -57,11 +57,11 @@ const projects: Project[] = [
         featured: true,
     },
     {
-        id: "project5",
+        id: "project6",
         title: "Mapúa Grade Tracker",
         description:
             "A web application for tracking grades and auto calculating term average for specific term. Built with Next.js, TypeScript, and Tailwind CSS.",
-        technologies: ["Next.js", "Node.js", "MySQL", "TypeScript", "Tailwind CSS", "Vercel", "AWS"],
+        technologies: ["Next.js", "Node.js", "MySQL"],
         images: [
             "/projects/twa-main.png?height=600&width=800",
             "/projects/twa-main2.png?height=600&width=800",
@@ -69,19 +69,29 @@ const projects: Project[] = [
         ],
     },
     {
-        id: "project4",
+        id: "project5",
         title: "RFID Attendance System",
         description:
             "An attendance tracking system using RFID technology to verify attendance for organization members. The system validates membership status before recording attendance.",
-        technologies: ["Next.js", "Node.js", "MySQL", "TypeScript", "Tailwind CSS", "Vercel", "AWS"],
+        technologies: ["Next.js", "Node.js", "MySQL"],
         images: ["/projects/attendancechecker.png?height=600&width=800"],
         },
+    {
+        id: "project4",
+        title: "Attendance Monitoring System",
+        description:
+        "A C++ WinForms attendance monitoring system that fetches student information from my API, allows one-click attendance marking, and stores the data into a .csv file for our IT101-1 project.",
+        technologies: ["C++"],
+        images: [
+        "/projects/attendance_monitoring.png?height=600&width=800",
+        ],
+    },
     {
         id: "project3",
         title: "Code Treasury Panel",
         description:
         "A web application for managing organization membership lists and automating receipt generation for membership payments. Built with Next.js, TypeScript, and Tailwind CSS.",
-        technologies: ["Next.js", "Node.js", "MySQL", "TypeScript", "Tailwind CSS", "Vercel", "AWS"],
+        technologies: ["Next.js", "Node.js", "MySQL"],
         images: [
         "/projects/codetreasury-main.png?height=600&width=800",
         "/projects/codetreasury-attendance.png?height=600&width=800",
@@ -91,7 +101,7 @@ const projects: Project[] = [
         id: "project2",
         title: "Trade Run Game",
         description:
-        "Trade Run is a copy of Stick Run, a nostalgia game remade using Unity and Socket.IO as the server.",
+        "Trade Run is a remake of Stick Run, a nostalgic game we decided to bring back. It was recoded from scratch using the Unity engine, and the server runs on Socket.IO.",
         technologies: ["Unity", "C#", "MySQL", "AWS"],
         images: [
         "/projects/tr-screenshot1.png?height=600&width=800",
@@ -107,6 +117,7 @@ const projects: Project[] = [
         "A multiplayer game client developed for Stick Bros. Features real-time gameplay, user authentication, and in-game purchases.",
         technologies: ["Unity", "C#", "MySQL", "AWS", "Firebase"],
         images: [
+        "/projects/sb-wallpaper.png?height=600&width=800",
         "/projects/sb-main.jpg?height=600&width=800",
         "/projects/sb-main2.jpg?height=600&width=800",
         "/projects/sb-main3.jpg?height=600&width=800",
@@ -114,6 +125,7 @@ const projects: Project[] = [
         "/projects/sb-main5.jpg?height=600&width=800",
         ],
         liveUrl: "https://store.steampowered.com/app/2265960/Stick_Bros/",
+        featured: true,
     },
 ]
 
@@ -121,6 +133,7 @@ export default function Projects() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null)
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
   const modalRef = useRef<HTMLDivElement>(null)
+  const [showAllProjects, setShowAllProjects] = useState(false)
 
   const openProject = (project: Project) => {
     setSelectedProject(project)
@@ -159,119 +172,136 @@ export default function Projects() {
         <h3 className="text-sm uppercase tracking-wider text-gray-500 mb-4 font-medium">Featured Projects</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {projects
-            .filter((p) => p.featured)
-            .map((project) => (
-              <motion.div
-                key={project.id}
-                whileHover={{ y: -5 }}
-                transition={{ duration: 0.2 }}
-                className="group relative bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl cursor-pointer border border-gray-100"
-                onClick={() => openProject(project)}
-              >
-                <div className="relative h-64 w-full overflow-hidden">
-                  <Image
-                    src={project.images[0] || "/placeholder.svg"}
-                    alt={project.title}
-                    fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  <div className="absolute bottom-0 left-0 right-0 p-4 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                    <div className="flex flex-wrap gap-1 mb-2">
-                      {project.technologies.slice(0, 3).map((tech) => (
-                        <Badge
-                          key={tech}
-                          variant="secondary"
-                          className="text-xs bg-white/20 text-white border-none backdrop-blur-sm flex items-center space-x-1"
-                        >
-                          <Image
-                            src={techLogos[tech] || "/placeholder.svg?height=20&width=20"}
-                            alt={tech}
-                            width={16}
-                            height={16}
-                            className="mr-1"
-                          />
-                          <span>{tech}</span>
-                        </Badge>
-                      ))}
-                      {project.technologies.length > 3 && (
-                        <Badge
-                          variant="secondary"
-                          className="text-xs bg-white/20 text-white border-none backdrop-blur-sm"
-                        >
-                          +{project.technologies.length - 3}
-                        </Badge>
-                      )}
-                    </div>
-                    <p className="text-sm text-white/80 line-clamp-2">{project.description}</p>
-                  </div>
-                </div>
-                <div className="p-4">
-                  <h3 className="font-semibold text-lg mb-1 group-hover:text-gray-900 transition-colors">
-                    {project.title}
-                  </h3>
-                  <div className="flex items-center space-x-2 text-gray-500">
-                    {project.liveUrl && <ExternalLink className="h-4 w-4" />}
-                    {project.githubUrl && <Github className="h-4 w-4" />}
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-        </div>
-      </div>
-
-      {/* All Projects */}
-      <div>
-        <h3 className="text-sm uppercase tracking-wider text-gray-500 mb-4 font-medium">All Projects</h3>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {projects.map((project) => (
-            <motion.div
-              key={project.id}
-              whileHover={{ y: -5 }}
-              transition={{ duration: 0.2 }}
-              className="group bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md cursor-pointer border border-gray-100"
-              onClick={() => openProject(project)}
+        .filter((p) => p.featured)
+        .map((project) => (
+          <motion.div
+            key={project.id}
+            whileHover={{ y: -5 }}
+            transition={{ duration: 0.2 }}
+            className="group relative bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl cursor-pointer border border-gray-100"
+            onClick={() => openProject(project)}
+          >
+            <div className="relative h-64 w-full overflow-hidden">
+          <Image
+            src={project.images[0] || "/placeholder.svg"}
+            alt={project.title}
+            fill
+            className="object-cover transition-transform duration-500 group-hover:scale-110"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          <div className="absolute bottom-0 left-0 right-0 p-4 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+            <div className="flex flex-wrap gap-1 mb-2">
+              {project.technologies.slice(0, 3).map((tech) => (
+            <Badge
+              key={tech}
+              variant="secondary"
+              className="text-xs bg-white/20 text-white border-none backdrop-blur-sm flex items-center space-x-1"
             >
-              <div className="relative h-48 w-full overflow-hidden">
-                <Image
-                  src={project.images[0] || "/placeholder.svg"}
-                  alt={project.title}
-                  fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors duration-300"></div>
-              </div>
-              <div className="p-4">
-                <h3 className="font-semibold text-lg mb-1 group-hover:text-gray-900 transition-colors">
-                  {project.title}
-                </h3>
-                <p className="text-sm text-gray-600 line-clamp-2 mb-3">{project.description}</p>
-                <div className="flex flex-wrap gap-1">
-                  {project.technologies.slice(0, 3).map((tech) => (
-                    <Badge
-                      key={tech}
-                      variant="secondary"
-                      className="text-xs py-1 px-2 bg-gray-100 text-gray-800 hover:bg-gray-200 transition-colors flex items-center space-x-1"
-                    >
-                      <Image
-                        src={techLogos[tech] || "/placeholder.svg?height=20&width=20"}
-                        alt={tech}
-                        width={16}
-                        height={16}
-                      />
-                      <span>{tech}</span>
-                    </Badge>
-                  ))}
-                  {project.technologies.length > 3 && (
-                    <Badge variant="secondary" className="text-xs">
-                      +{project.technologies.length - 3}
-                    </Badge>
-                  )}
-                </div>
-              </div>
-            </motion.div>
-          ))}
+              <Image
+                src={techLogos[tech] || "/placeholder.svg?height=20&width=20"}
+                alt={tech}
+                width={16}
+                height={16}
+                className="mr-1"
+              />
+              <span>{tech}</span>
+            </Badge>
+              ))}
+              {project.technologies.length > 3 && (
+            <Badge
+              variant="secondary"
+              className="text-xs bg-white/20 text-white border-none backdrop-blur-sm"
+            >
+              +{project.technologies.length - 3}
+            </Badge>
+              )}
+            </div>
+            <p className="text-sm text-white/80 line-clamp-2">{project.description}</p>
+          </div>
+            </div>
+            <div className="p-4">
+          <h3 className="font-semibold text-lg mb-1 group-hover:text-gray-900 transition-colors">
+            {project.title}
+          </h3>
+          <div className="flex items-center space-x-2 text-gray-500">
+            {project.liveUrl && <ExternalLink className="h-4 w-4" />}
+            {project.githubUrl && <Github className="h-4 w-4" />}
+          </div>
+            </div>
+          </motion.div>
+        ))}
         </div>
+        {/* All Projects */}
+        <div className="mt-12"></div>
+
+        <div className="flex justify-center mb-6">
+          {showAllProjects ? (
+        <h3 className="text-sm uppercase tracking-wider text-gray-500 font-medium text-center">
+          All Projects
+        </h3>
+          ) : (
+        <Button
+          variant="outline"
+          className="px-6 py-2 rounded-full shadow-md hover:shadow-lg transition-all duration-300"
+          onClick={() => setShowAllProjects((prev) => !prev)}
+        >
+          Show All Projects
+        </Button>
+          )}
+        </div>
+        {showAllProjects && (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        {projects.map((project, index) => (
+          <motion.div
+            key={project.id}
+            whileHover={{ y: -5 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: index * 0.1, duration: 0.3 }}
+            className="group bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md cursor-pointer border border-gray-100"
+            onClick={() => openProject(project)}
+          >
+            <div className="relative h-48 w-full overflow-hidden">
+          <Image
+            src={project.images[0] || "/placeholder.svg"}
+            alt={project.title}
+            fill
+            className="object-cover transition-transform duration-500 group-hover:scale-105"
+          />
+          <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors duration-300"></div>
+            </div>
+            <div className="p-4">
+          <h3 className="font-semibold text-lg mb-1 group-hover:text-gray-900 transition-colors">
+            {project.title}
+          </h3>
+          <p className="text-sm text-gray-600 line-clamp-2 mb-3">{project.description}</p>
+          <div className="flex flex-wrap gap-1">
+            {project.technologies.slice(0, 3).map((tech) => (
+              <Badge
+            key={tech}
+            variant="secondary"
+            className="text-xs py-1 px-2 bg-gray-100 text-gray-800 hover:bg-gray-200 transition-colors flex items-center space-x-1"
+              >
+            <Image
+              src={techLogos[tech] || "/placeholder.svg?height=20&width=20"}
+              alt={tech}
+              width={16}
+              height={16}
+            />
+            <span>{tech}</span>
+              </Badge>
+            ))}
+            {project.technologies.length > 3 && (
+              <Badge variant="secondary" className="text-xs">
+            +{project.technologies.length - 3}
+              </Badge>
+            )}
+          </div>
+            </div>
+          </motion.div>
+        ))}
+          </div>
+        )}
       </div>
 
       <AnimatePresence>
