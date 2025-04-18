@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui/badge"
 import { Github, Linkedin, Mail, ChevronDown, ChevronUp } from "lucide-react"
 import Image from "next/image"
 import { GridFadeIn } from "./GridFadeIn"
+import Projects from "./projects"
 
 export default function Portfolio() {
   const [mounted, setMounted] = useState(false)
@@ -17,7 +18,7 @@ export default function Portfolio() {
   if (!mounted) return null
 
   return (
-    <div className="container mx-auto px-4 py-6 space-y-6">
+    <div className="container mx-auto px-4 py-6 space-y-8">
       <GridFadeIn>
         <Header />
       </GridFadeIn>
@@ -35,6 +36,9 @@ export default function Portfolio() {
       </GridFadeIn>
       <GridFadeIn delay={1.0}>
         <Education />
+      </GridFadeIn>
+      <GridFadeIn delay={1.2}>
+        <Projects />
       </GridFadeIn>
     </div>
   )
@@ -330,15 +334,6 @@ function ExperienceCard({ experience }: { experience: Experience }) {
   )
 }
 
-interface EducationProps {
-  degree: string
-  school: string
-  logo: string
-  year: string
-  currentYear?: string
-  achievements?: { term: string; award: string; description: string }[]
-}
-
 function Education() {
   const education = [
     {
@@ -363,7 +358,7 @@ function Education() {
       className="bg-white"
     >
       <h2 className="text-xl font-semibold mb-3 text-gray-800">Education</h2>
-      <div className="space-y-3 mb-32">
+      <div className="space-y-3">
         {education.map((edu, index) => (
           <div key={index} className="flex items-center space-x-3">
             <Image
