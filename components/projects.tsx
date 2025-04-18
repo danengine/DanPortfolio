@@ -127,7 +127,6 @@ const projects: Project[] = [
       "/projects/sb-main5.jpg?height=600&width=800",
     ],
     liveUrl: "https://store.steampowered.com/app/2265960/Stick_Bros/",
-    featured: true,
   },
   {
     id: "project1",
