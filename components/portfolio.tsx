@@ -155,6 +155,24 @@ function TechStack() {
 
 function Clubs() {
   const clubs = [
+    // {
+    //   title: "President",
+    //   company: "Association of Proactive Innovators Mapúa MCM",
+    //   logo: "/api.jpg?height=48&width=48",
+    //   period: "April 2025 - Present",
+    //   description:
+    //     "As a Programs Committee Volunteer, I assist in organizing events and workshops, helping to foster a vibrant tech community.",
+    //   timeline: [],
+    // },
+    {
+      title: "Programs Committee",
+      company: "Google Developer Group Davao",
+      logo: "/gdg.jpg?height=48&width=48",
+      period: "April 2025 - Present",
+      description:
+        "As a Programs Committee Volunteer, I assist in organizing events and workshops, helping to foster a vibrant tech community.",
+      timeline: [],
+    },
     {
       title: "Web & App Developer",
       company: "Mapúa Malayan Developer Student Club",
