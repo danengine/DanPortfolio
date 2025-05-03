@@ -59,18 +59,18 @@ const projects: Project[] = [
     liveUrl: "https://nyxeon.danengine.tech",
     featured: true,
   },
-  {
-    id: "project7",
-    title: "Mapúa Grade Tracker",
-    description:
-      "Mapúa Grade Tracker is a web application designed to display the term average weighted grades of BSCS Mapúa MCM students for a specific term. It also shows the course with the highest grade and is integrated with our school LMS, Blackboard Learn.",
-    technologies: ["Next.js", "Node.js", "MySQL"],
-    images: [
-      "/projects/twa-main.png?height=600&width=800",
-      "/projects/twa-main2.png?height=600&width=800",
-      "/projects/twa-main3.png?height=600&width=800",
-    ],
-  },
+  // {
+  //   id: "project7",
+  //   title: "Mapúa Grade Tracker",
+  //   description:
+  //     "Mapúa Grade Tracker is a web application designed to display the term average weighted grades of BSCS Mapúa MCM students for a specific term. It also shows the course with the highest grade and is integrated with our school LMS, Blackboard Learn.",
+  //   technologies: ["Next.js", "Node.js", "MySQL"],
+  //   images: [
+  //     "/projects/twa-main.png?height=600&width=800",
+  //     "/projects/twa-main2.png?height=600&width=800",
+  //     "/projects/twa-main3.png?height=600&width=800",
+  //   ],
+  // },
   {
     id: "project6",
     title: "RFID Attendance System",

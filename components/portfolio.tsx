@@ -165,7 +165,7 @@ function Clubs() {
     //   timeline: [],
     // },
     {
-      title: "Programs Committee",
+      title: "Programs Committee Volunteer",
       company: "Google Developer Group Davao",
       logo: "/gdg.jpg?height=48&width=48",
       period: "April 2025 - Present",
