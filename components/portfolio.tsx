@@ -111,7 +111,7 @@ function TechStack() {
     { name: "AWS", logo: "/aws.webp?height=20&width=20" },
     { name: "Docker", logo: "/docker.webp?height=20&width=20" },
     { name: "Firebase", logo: "/firebase.webp?height=20&width=20" },
-    { name: "Socket.io", logo: "/Socketio.png?height=20&width=20" },
+    { name: "Socket.io", logo: "/socketio.png?height=20&width=20" },
     // { name: 'Express', logo: '/placeholder.svg?height=20&width=20' },
     // { name: 'MongoDB', logo: '/placeholder.svg?height=20&width=20' },
     // { name: 'PostgreSQL', logo: '/placeholder.svg?height=20&width=20' },
