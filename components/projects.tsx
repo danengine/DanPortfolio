@@ -27,6 +27,7 @@ const techLogos: Record<string, string> = {
   AWS: "/aws.webp?height=20&width=20",
   Docker: "/docker.webp?height=20&width=20",
   Firebase: "/firebase.webp?height=20&width=20",
+  "Socket.io": "/socketio.png?height=20&width=20",
 }
 
 interface Project {
@@ -41,6 +42,21 @@ interface Project {
 }
 
 const projects: Project[] = [
+  {
+    id: "project9",
+    title: "CCIS Quiz Multiplayer",
+    description:
+      "A quiz platform similar to Kahoot, where players can join using a QR code. The server handles player synchronization, and participants can answer questions on their devices in real-time.",
+    technologies: ["Next.js", "Socket.io", "Node.js", "AWS"],
+    images: [
+      "/projects/ccis-quiz-load.png?height=600&width=800",
+      "/projects/ccis-quiz-menu.png?height=600&width=800",
+      "/projects/ccis-quiz-question.png?height=600&width=800",
+      "/projects/ccis-quiz-complete.png?height=600&width=800",
+    ],
+    liveUrl: "https://ccis.danengine.tech/adminonly",
+    featured: true,
+  },
   {
     id: "project8",
     title: "Event Registration System",
@@ -59,18 +75,6 @@ const projects: Project[] = [
     liveUrl: "https://nyxeon.danengine.tech",
     featured: true,
   },
-  // {
-  //   id: "project7",
-  //   title: "Mapúa Grade Tracker",
-  //   description:
-  //     "Mapúa Grade Tracker is a web application designed to display the term average weighted grades of BSCS Mapúa MCM students for a specific term. It also shows the course with the highest grade and is integrated with our school LMS, Blackboard Learn.",
-  //   technologies: ["Next.js", "Node.js", "MySQL"],
-  //   images: [
-  //     "/projects/twa-main.png?height=600&width=800",
-  //     "/projects/twa-main2.png?height=600&width=800",
-  //     "/projects/twa-main3.png?height=600&width=800",
-  //   ],
-  // },
   {
     id: "project6",
     title: "RFID Attendance System",
@@ -104,7 +108,7 @@ const projects: Project[] = [
     title: "Trade Run Game",
     description:
       "Trade Run is a remake of Stick Run, a nostalgic game we decided to bring back. It was recoded from scratch using the Unity engine, and the server runs on Socket.IO.",
-    technologies: ["Unity", "C#", "Node.js", "MySQL", "AWS"],
+    technologies: ["Unity", "C#", "Socket.io", "Node.js", "MySQL", "AWS"],
     images: [
       "/projects/tr-screenshot1.png?height=600&width=800",
       "/projects/tr-screenshot2.png?height=600&width=800",
@@ -127,6 +131,7 @@ const projects: Project[] = [
       "/projects/sb-main5.jpg?height=600&width=800",
     ],
     liveUrl: "https://store.steampowered.com/app/2265960/Stick_Bros/",
+    featured: true,
   },
   {
     id: "project1",
@@ -141,7 +146,7 @@ const projects: Project[] = [
       "/projects/bloxeasy-main4.png?height=600&width=800",
     ],
   },
-]
+];
 
 export default function Projects() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null)

@@ -111,6 +111,7 @@ function TechStack() {
     { name: "AWS", logo: "/aws.webp?height=20&width=20" },
     { name: "Docker", logo: "/docker.webp?height=20&width=20" },
     { name: "Firebase", logo: "/firebase.webp?height=20&width=20" },
+    { name: "Socket.io", logo: "/Socketio.png?height=20&width=20" },
     // { name: 'Express', logo: '/placeholder.svg?height=20&width=20' },
     // { name: 'MongoDB', logo: '/placeholder.svg?height=20&width=20' },
     // { name: 'PostgreSQL', logo: '/placeholder.svg?height=20&width=20' },
@@ -155,15 +156,6 @@ function TechStack() {
 
 function Clubs() {
   const clubs = [
-    // {
-    //   title: "President",
-    //   company: "Association of Proactive Innovators Mapúa MCM",
-    //   logo: "/api.jpg?height=48&width=48",
-    //   period: "April 2025 - Present",
-    //   description:
-    //     "As a Programs Committee Volunteer, I assist in organizing events and workshops, helping to foster a vibrant tech community.",
-    //   timeline: [],
-    // },
     {
       title: "Programs Committee Volunteer",
       company: "Google Developer Group Davao",
@@ -200,6 +192,13 @@ function Clubs() {
         "As an Auditor, I oversee the organization's activities, ensuring compliance and transparency in all processes.",
       timeline: [
         {
+          date: "May 2025",
+          role: "CCIS Quiz Multiplayer",
+          description:
+            "Created an interactive booth experience showcasing the latest in computer science innovations and projects.",
+          githubUrl: "",
+        },
+        {
           date: "March 2025",
           role: "Attendance Checker",
           description:
@@ -211,7 +210,7 @@ function Clubs() {
           role: "Code Treasury Panel",
           description:
             "Created the Code Treasury Panel to manage the organization's membership list and automate the generation of receipts for membership payments.",
-          githubUrl: "https://codetreasury.danengine.tech",
+          githubUrl: "",
         },
       ],
     },
