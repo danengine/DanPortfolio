@@ -165,29 +165,29 @@ function Clubs() {
     //     "As a Programs Committee Volunteer, I assist in organizing events and workshops, helping to foster a vibrant tech community.",
     //   timeline: [],
     // },
-    // {
-    //   title: "Web & App Developer",
-    //   company: "Mapúa Malayan Developer Student Club",
-    //   logo: "/mmdsc.jpg?height=48&width=48",
-    //   period: "February 2025 - Present",
-    //   description:
-    //     "As a Web & App Developer, I contribute to the organization's projects by building and maintaining web and mobile applications.",
-    //   timeline: [],
-    // },
     {
-      title: "Project Development Member & CS Auditor",
+      title: "Web Developer",
+      company: "Mapúa Malayan Developer Student Club",
+      logo: "/mmdsc.jpg?height=48&width=48",
+      period: "February 2025 - Present",
+      description:
+        "As a Web & App Developer, I contribute to the organization's projects by building and maintaining web and mobile applications.",
+      timeline: [],
+    },
+    {
+      title: "Project Development Head",
       company: "Computing Students Society",
       logo: "/css.jpg?height=48&width=48",
-      period: "September 2024 - Present",
+      period: "August 2025 - Present",
       description:
         "As an Auditor, I oversee the organization's activities, ensuring compliance and transparency in all processes.",
       timeline: [],
     },
     {
-      title: "Auditor",
+      title: "Treasurer",
       company: "Coding Organization for Digital Excellence",
       logo: "/code.png?height=48&width=48",
-      period: "September 2024 - Present",
+      period: "August 2025 - Present",
       description:
         "As an Auditor, I oversee the organization's activities, ensuring compliance and transparency in all processes.",
       timeline: [
