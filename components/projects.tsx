@@ -42,21 +42,21 @@ interface Project {
 }
 
 const projects: Project[] = [
-  {
-    id: "project10",
-    title: "ParseIt Grammar-Based Tokenizer",
-    description:
-      "Analyze arithmetic expressions and regex patterns, confirm validity, and reveal their construction according to context-free grammar.",
-    technologies: ["React", "Vercel"],
-    images: [
-      "/projects/parseit-home.png?height=600&width=800",
-      "/projects/parseit-playground-0.png?height=600&width=800",
-      "/projects/parseit-playground-1.png?height=600&width=800",
-      "/projects/parseit-playground-2.png?height=600&width=800",
-    ],
-    liveUrl: "https://parseit.danengine.tech",
-    featured: true,
-  },
+  // {
+  //   id: "project10",
+  //   title: "ParseIt Grammar-Based Tokenizer",
+  //   description:
+  //     "Analyze arithmetic expressions and regex patterns, confirm validity, and reveal their construction according to context-free grammar.",
+  //   technologies: ["React", "Vercel"],
+  //   images: [
+  //     "/projects/parseit-home.png?height=600&width=800",
+  //     "/projects/parseit-playground-0.png?height=600&width=800",
+  //     "/projects/parseit-playground-1.png?height=600&width=800",
+  //     "/projects/parseit-playground-2.png?height=600&width=800",
+  //   ],
+  //   liveUrl: "https://parseit.danengine.tech",
+  //   featured: true,
+  // },
   {
     id: "project9",
     title: "CCIS Quiz Multiplayer",
