@@ -42,21 +42,39 @@ interface Project {
 }
 
 const projects: Project[] = [
-  // {
-  //   id: "project10",
-  //   title: "ParseIt Grammar-Based Tokenizer",
-  //   description:
-  //     "Analyze arithmetic expressions and regex patterns, confirm validity, and reveal their construction according to context-free grammar.",
-  //   technologies: ["React", "Vercel"],
-  //   images: [
-  //     "/projects/parseit-home.png?height=600&width=800",
-  //     "/projects/parseit-playground-0.png?height=600&width=800",
-  //     "/projects/parseit-playground-1.png?height=600&width=800",
-  //     "/projects/parseit-playground-2.png?height=600&width=800",
-  //   ],
-  //   liveUrl: "https://parseit.danengine.tech",
-  //   featured: true,
-  // },
+  {
+    id: "project11",
+    title: "Kelsey's Homestay",
+    description:
+      "Analyze arithmetic expressions and regex patterns, confirm validity, and reveal their construction according to context-free grammar.",
+    technologies: ["React", "Supabase", "Vercel"],
+    images: [
+      "/projects/kelsey-home.png?height=600&width=800",
+      "/projects/kelsey-1.png?height=600&width=800",
+      "/projects/kelsey-2.png?height=600&width=800",
+      "/projects/kelsey-3.png?height=600&width=800",
+      "/projects/kelsey-4.png?height=600&width=800",
+      "/projects/kelsey-5.png?height=600&width=800",
+      "/projects/kelsey-6.png?height=600&width=800",
+    ],
+    liveUrl: "https://parseit.danengine.tech",
+    featured: true,
+  },
+  {
+    id: "project10",
+    title: "ParseIt Grammar-Based Tokenizer",
+    description:
+      "Analyze arithmetic expressions and regex patterns, confirm validity, and reveal their construction according to context-free grammar.",
+    technologies: ["React", "Vercel"],
+    images: [
+      "/projects/parseit-home.png?height=600&width=800",
+      "/projects/parseit-playground-0.png?height=600&width=800",
+      "/projects/parseit-playground-1.png?height=600&width=800",
+      "/projects/parseit-playground-2.png?height=600&width=800",
+    ],
+    liveUrl: "https://parseit.danengine.tech",
+    featured: false,
+  },
   {
     id: "project9",
     title: "CCIS Quiz Multiplayer",
@@ -70,7 +88,7 @@ const projects: Project[] = [
       "/projects/ccis-quiz-complete.png?height=600&width=800",
     ],
     liveUrl: "https://ccis.danengine.tech/adminonly",
-    featured: true,
+    featured: false,
   },
   {
     id: "project8",
