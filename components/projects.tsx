@@ -46,7 +46,7 @@ const projects: Project[] = [
     id: "project11",
     title: "Kelsey's Homestay",
     description:
-      "Analyze arithmetic expressions and regex patterns, confirm validity, and reveal their construction according to context-free grammar.",
+      "Kelsey’s Homestay is a web platform where agents can list and book units. Agents can add new property listings, while administrators handle approvals, manage bookings, and oversee payments and overall operations.",
     technologies: ["React", "Supabase", "Vercel"],
     images: [
       "/projects/kelsey-home.png?height=600&width=800",
@@ -57,7 +57,7 @@ const projects: Project[] = [
       "/projects/kelsey-5.png?height=600&width=800",
       "/projects/kelsey-6.png?height=600&width=800",
     ],
-    liveUrl: "https://parseit.danengine.tech",
+    liveUrl: "https://oop-dev.vercel.app",
     featured: true,
   },
   {
